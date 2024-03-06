@@ -30,7 +30,7 @@ export function Auth() {
 		mutationFn: (data: IAuthForm) =>
 			authService.main(isLoginForm ? 'login' : 'register', data),
 		onSuccess() {
-			toast.success('Successfully login!')
+			toast.success('Авторизация успешна!')
 			reset()
 			push(DASHBOARD_PAGES.HOME)
 		}
@@ -46,33 +46,33 @@ export function Auth() {
 				className='w-1/4 m-auto shadow bg-sidebar rounded-xl p-layout'
 				onSubmit={handleSubmit(onSubmit)}
 			>
-				<Heading title='Auth' />
+				<Heading title='Авторизация' />
 
 				<Field
 					id='email'
 					label='Email:'
-					placeholder='Enter email:'
+					placeholder='Введите email:'
 					type='email'
 					extra='mb-4'
 					{...register('email', {
-						required: 'Email is required!'
+						required: 'Email обязателен!'
 					})}
 				/>
 
 				<Field
 					id='password'
-					label='Password: '
-					placeholder='Enter password: '
+					label='Пароль: '
+					placeholder='Введите пароль: '
 					type='password'
 					{...register('password', {
-						required: 'Password is required!'
+						required: 'Требуется пароль!'
 					})}
 					extra='mb-6'
 				/>
 
 				<div className='flex items-center gap-5 justify-center'>
-					<Button onClick={() => setIsLoginForm(true)}>Login</Button>
-					<Button onClick={() => setIsLoginForm(false)}>Register</Button>
+					<Button onClick={() => setIsLoginForm(true)}>Авторизация</Button>
+					<Button onClick={() => setIsLoginForm(false)}>Регистрация</Button>
 				</div>
 			</form>
 		</div>
