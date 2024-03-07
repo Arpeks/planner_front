@@ -8,7 +8,7 @@ import { authService } from '@/services/auth.service'
 import { errorCatch } from './error'
 
 const options: CreateAxiosDefaults = {
-	baseURL: 'http://localhost:4200/api',
+	baseURL: 'http://192.0.0.12:4200/api',
 	headers: {
 		'Content-Type': 'application/json'
 	},
