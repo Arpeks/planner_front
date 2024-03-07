@@ -34,7 +34,7 @@ export function Settings() {
 				className='w-2/4'
 				onSubmit={handleSubmit(onSubmit)}
 			>
-				<div className='grid grid-cols-2 gap-10'>
+				<div className='grid grid-cols-3 gap-10'>
 					<div>
 						<Field
 							id='email'
@@ -65,8 +65,49 @@ export function Settings() {
 							{...register('name')}
 							extra='mb-4'
 						/>
+
+						<Field
+							id='surname'
+							label='Фамилия: '
+							placeholder='Ваша фамилия: '
+							{...register('surname')}
+							extra='mb-4'
+						/>
+
+						<Field
+							id='middlename'
+							label='Отчество: '
+							placeholder='Ваше отчество: '
+							{...register('middlename')}
+							extra='mb-4'
+						/>
 					</div>
 
+					<div>
+						<Field
+							id='department'
+							label='Отдел: '
+							placeholder='Отдел: '
+							{...register('department')}
+							extra='mb-4'
+						/>
+
+						<Field
+							id='position'
+							label='Должность: '
+							placeholder='Должность: '
+							{...register('position')}
+							extra='mb-4'
+						/>
+
+						<Field
+							id='role'
+							label='Роль: '
+							placeholder='Роль: '
+							{...register('role')}
+							extra='mb-4'
+						/>
+					</div>
 				</div>
 
 				<Button
