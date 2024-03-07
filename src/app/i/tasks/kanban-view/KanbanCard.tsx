@@ -14,6 +14,7 @@ import { useDeleteTask } from '../hooks/useDeleteTask'
 import { useTaskDebounce } from '../hooks/useTaskDebounce'
 
 import styles from './KanbanView.module.scss'
+import { PopupUI } from '@/components/ui/popup'
 
 interface IKanbanCard {
 	item: ITaskResponse
@@ -101,6 +102,11 @@ export function KanbanCard({ item, setItems }: IKanbanCard) {
 				>
 					{isDeletePending ? <Loader size={15} /> : <Trash size={15} />}
 				</button>
+				
+				<PopupUI
+					text='Какой-то текст'
+					buttonName='test'
+				/>
 			</div>
 		</div>
 	)
